@@ -1,0 +1,16 @@
+[
+	{
+		"name": "x0",
+		"content": "0",
+	},
+	{
+		"name": "x1",
+		"content": "0",
+		"alias": "ra",
+	},
+	{
+		"name": "x2",
+		"content": "2",
+		"alias": "sp"
+	}
+]
