@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Professore extends Persona {
 
     String[] classi;
