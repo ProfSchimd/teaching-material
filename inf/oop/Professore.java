@@ -1,11 +1,11 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Professore extends Persona {
 
     String[] classi;
     String[] materie;
 
-    public Professore(int id, String firstName, String secondName, Date birthDate) {
+    public Professore(int id, String firstName, String secondName, LocalDate birthDate) {
         super(id, firstName, secondName, birthDate);
     }
 

@@ -1,12 +1,12 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Persona {
     private int id;
     private String firstName;
     private String secondName;
-    private Date birthDate;
+    private LocalDate birthDate;
 
-    public Persona(int id, String firstName, String secondName, Date birthDate) {
+    public Persona(int id, String firstName, String secondName, LocalDate birthDate) {
         this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
@@ -33,11 +33,11 @@ public class Persona {
         this.secondName = secondName;
     }
 
-    public Date getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
     

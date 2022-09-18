@@ -1,10 +1,10 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Studente extends Persona {
 
     private String classe;
 
-    public Studente(int id, String firstName, String secondName, Date birthDate) {
+    public Studente(int id, String firstName, String secondName, LocalDate birthDate) {
         super(id, firstName, secondName, birthDate);
     }
 

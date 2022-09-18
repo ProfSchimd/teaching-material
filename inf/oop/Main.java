@@ -1,4 +1,4 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Main {
 
@@ -13,6 +13,10 @@ public class Main {
         System.out.println(other.getId() + " " + other.name);
     }
 
+    private static void testClassPersona() {
+        Persona p1 = new Persona(1, "Antonio", "Esposito", LocalDate.of(2000, 01, 10));
+    }
+
     private static void testGerarchiaPersona() {
         Persona ata = new Persona(100, "Paolo", "Verdi", null);
         Persona prof = new Professore(200, "Giorgia", "Fumagalli", null);
@@ -25,5 +29,7 @@ public class Main {
 
     public static void main(String[] args) {
         testCampiMetodi();
+        testClassPersona();
+        testGerarchiaPersona();
     }
 }
