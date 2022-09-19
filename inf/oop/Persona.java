@@ -40,5 +40,10 @@ public class Persona {
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
+
+    @Override
+    public String toString() {
+        return "[" + this.id + "]: " + this.firstName + " " + this.secondName;
+    }
     
 }

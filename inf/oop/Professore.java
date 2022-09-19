@@ -21,4 +21,9 @@ public class Professore extends Persona {
     public String[] getMaterie() {
         return materie;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " (Professore)";
+    }
 }

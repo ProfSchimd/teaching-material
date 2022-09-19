@@ -15,4 +15,9 @@ public class Studente extends Persona {
     public void setClasse(String classe) {
         this.classe = classe;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " (Studente)";
+    }
 }
