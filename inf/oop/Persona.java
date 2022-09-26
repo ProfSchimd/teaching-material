@@ -45,5 +45,9 @@ public class Persona {
     public String toString() {
         return "[" + this.id + "]: " + this.firstName + " " + this.secondName;
     }
+
+    public void introduce() {
+        System.out.println("Hi I'm " + this.firstName + " " + this.secondName + "!");
+    }
     
 }

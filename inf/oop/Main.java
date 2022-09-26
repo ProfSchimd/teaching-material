@@ -24,12 +24,40 @@ public class Main {
 
         st.setClasse("1A");
         // prof.setClassi(); // Errore!
+    }
 
+    private static void testCastingGerarchia() {
+        // cast implicito: Studente -> Persona
+        Persona p = new Studente(10, "Antony", "Jervis", null);
+        // cast esplicito: Persona -> Studente
+        Studente s = (Studente)p;
+        // cast esplicito: Persona -> Professore
+        // Runtime error!
+        Professore prof = (Professore)p;
+
+        Persona[] anagrafica = new Persona[100];
+        anagrafica[0] = new Professore(20, "John", "Waine", null);
+        anagrafica[1] = new Studente(30, "Will", "Foreman", null);
+        // Errore!
+        Studente[] registro = (Studente[])anagrafica;
+        Object[] anArray = anagrafica;
+    }
+
+    public static void testOverride() {
+        Professore prof = new Professore(100, "Elvis", "Costello", null);
+        Dirigente ds = new Dirigente(1, "Giovanna", "Moro", null);
+        Persona p = ds;
+
+        System.out.println(prof);
+        System.out.println(ds);
+        System.out.println(p);
     }
 
     public static void main(String[] args) {
-        testCampiMetodi();
-        testClassPersona();
-        testGerarchiaPersona();
+        // testCampiMetodi();
+        // testClassPersona();
+        // testGerarchiaPersona();
+        // testCastingGerarchia();
+        testOverride();
     }
 }
