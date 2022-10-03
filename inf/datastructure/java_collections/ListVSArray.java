@@ -21,21 +21,27 @@ public class ListVSArray {
         result = sum;
     }
 
-    public static void main(String[] args) {       
+    public static void main(String[] args) {
+        int size = COUNT;
+        int tests = TESTS;
+        if (args.length >= 2) {
+            size = Integer.parseInt(args[0]);
+            tests = Integer.parseInt(args[1]);
+        }
         Random r = new Random();
         ArrayList<Double> arrayList = new ArrayList<Double>(COUNT);
-        for (int i = 0; i < COUNT; i++) {
+        for (int i = 0; i < size; i++) {
             arrayList.add(r.nextDouble());
         }
         LinkedList<Double> linkedList = new LinkedList<Double>(arrayList);
 
         long begin = System.currentTimeMillis();
-        testRandomAccess(arrayList, TESTS);
+        testRandomAccess(arrayList, tests);
         long end = System.currentTimeMillis();
         System.out.println("ArrayList: " + (end - begin));
 
         begin = System.currentTimeMillis();
-        testRandomAccess(linkedList, TESTS);
+        testRandomAccess(linkedList, tests);
         end = System.currentTimeMillis();
         System.out.println("ArrayList: " + (end - begin));
     }
