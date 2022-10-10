@@ -13,6 +13,8 @@
 // limitations under the License.
 
 /**
+ * Interface for the <em>stack</em> data structure storing {@link Object}
+ * references.
  * 
  * @version 0.1
  * @author Michele Schimd
