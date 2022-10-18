@@ -5,13 +5,14 @@ class Person {
 
   
   // Initializing format of constructor
+  // uses 'initializing formal parameters'
   Person(this.firstName, this.secondName);
   // Equivalent to the following
   // Person(String fn, String sn) :
   //   firstName = fn,
   //   secondName = sn;
   
-  // Named constructor with pre-body initialization
+  // Named constructor with initializing list
   Person.johnSmith() : firstName = 'John', secondName = 'Smith';
   Person.fromList(List<String> list) : firstName = list[0], secondName = list[1];
   
