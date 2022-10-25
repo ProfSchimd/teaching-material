@@ -24,7 +24,7 @@
  * @author Michele Schimd
  */
 
-public interface Vector {
+public interface IVector {
 
     /**
      * Inserts the given element at the end of the vector
