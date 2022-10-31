@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Canvas experiment</title>
+    <!-- Normally, scripts go on a different file! -->
+    <script type="application/javascript">
+        function draw() {
+            const canvas = document.getElementById("canvas");
+            canvas.addEventListener('click', function(e) { console.log(`(${e.offsetX},${e.offsetY})`) }, false);
+            if (canvas.getContext) {
+                const ctx = canvas.getContext("2d");
+
+                const edge = 50;
+                const n = 10;
+                for (let i = 0; i < n; i++) {
+                    for (let j = 0; j < n; j++) {
+                        ctx.strokeRect(i * edge, j * edge, edge, edge)
+                        const r = Math.random();
+                        if (r < 0.05) {
+                            ctx.beginPath();
+                            ctx.moveTo(i*edge+10, j*edge+25);
+                            ctx.lineTo(i*edge+25, j*edge+10);
+                            ctx.lineTo(i*edge+40, j*edge+25);
+                            ctx.lineTo(i*edge+25, j*edge+40);
+                            ctx.fillStyle = "red";
+                            ctx.fill();
+                        } 
+                        if (r > 0.95) {
+                            ctx.beginPath();
+                            ctx.arc(i*edge+25, j*edge+25, 15, 0, 2 * Math.PI);
+                            ctx.fillStyle = "green";
+                            ctx.fill();
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="500" height="500"></canvas>
+</body>
+
+</html>
