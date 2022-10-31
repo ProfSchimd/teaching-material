@@ -9,27 +9,45 @@
         function draw() {
             const canvas = document.getElementById("canvas");
             canvas.addEventListener('click', function(e) { console.log(`(${e.offsetX},${e.offsetY})`) }, false);
+            // Make sure width and height are set on the <canvas> element
+            width  = canvas.width;
+            height = canvas.height;
             if (canvas.getContext) {
                 const ctx = canvas.getContext("2d");
+                // Everything is relative to the:
+                // - n: number of rows and columns
+                // - height and width of the canvas
+                // The example is for a canvas 500x500
+                const n = 10; 
+                const edge = width / n; // 50 (=500/10)
+                const edgeHalf = edge / 2; // 25 (=50/2)
+                const squareBorder = edge / 5; // 10 (=50/5)
+                const squareContentRadius = (edge - 2*squareBorder) / 2; // 15 (=(50-2*10)/2)
 
-                const edge = 50;
-                const n = 10;
+                // There are two types of content:
+                // 1) red 'diamond' player and
+                // 2) green 'circle' player.
+                // The board is filled with a random number of each (not necessarily the same)
+                // the 'ratio' says how much, on average, each player squares are set
+                // For example ration = 0.05 means each player has about 5% of the squares
+                const ratio = 0.05;
                 for (let i = 0; i < n; i++) {
                     for (let j = 0; j < n; j++) {
                         ctx.strokeRect(i * edge, j * edge, edge, edge)
+                        // random number between 0.0 (included) and 1.0 (excluded)
                         const r = Math.random();
-                        if (r < 0.05) {
+                        if (r < ratio) {
                             ctx.beginPath();
-                            ctx.moveTo(i*edge+10, j*edge+25);
-                            ctx.lineTo(i*edge+25, j*edge+10);
-                            ctx.lineTo(i*edge+40, j*edge+25);
-                            ctx.lineTo(i*edge+25, j*edge+40);
+                            ctx.moveTo(i*edge+squareBorder, j*edge+edgeHalf);
+                            ctx.lineTo(i*edge+edgeHalf, j*edge+squareBorder);
+                            ctx.lineTo(i*edge+(edge - squareBorder), j*edge+edgeHalf);
+                            ctx.lineTo(i*edge+edgeHalf, j*edge+(edge - squareBorder));
                             ctx.fillStyle = "red";
                             ctx.fill();
                         } 
-                        if (r > 0.95) {
+                        if (r > 1.0 - ratio) {
                             ctx.beginPath();
-                            ctx.arc(i*edge+25, j*edge+25, 15, 0, 2 * Math.PI);
+                            ctx.arc(i*edge+edgeHalf, j*edge+edgeHalf, squareContentRadius, 0, 2 * Math.PI);
                             ctx.fillStyle = "green";
                             ctx.fill();
                         }
@@ -37,11 +55,18 @@
                 }
             }
         }
+        /**
+         * This function shows on the console the clicked point on a canvas.
+         * It uses `offsetX` and `offsetY` properties of the passed event.
+         */
+        function onClickCanvas(e) {
+            console.log(`${e.offsetX}, ${e.offsetY}`);
+        }
     </script>
 </head>
 
 <body onload="draw();">
-    <canvas id="canvas" width="500" height="500"></canvas>
+    <canvas id="canvas" width="500" height="500" onclick="onClickCanvas"></canvas>
 </body>
 
 </html>
