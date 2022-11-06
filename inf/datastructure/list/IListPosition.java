@@ -1,5 +1,5 @@
 public interface IListPosition {
-    Object content();
+    Object value();
     IListPosition next();
     IListPosition prev();
 }
