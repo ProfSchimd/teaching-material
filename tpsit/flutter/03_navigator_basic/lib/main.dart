@@ -84,10 +84,13 @@ class DetailPage extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: const AssetImage("assets/smc.jpeg"),
+                      image: AssetImage((MediaQuery.of(context).orientation ==
+                              Orientation.portrait)
+                          ? "assets/bg_portrait.jpg"
+                          : "assets/bg_landscape.jpg"),
                       fit: BoxFit.cover,
                       colorFilter: ColorFilter.mode(
-                          Colors.black.withOpacity(0.3), BlendMode.dstATop)),
+                          Colors.black.withOpacity(0.45), BlendMode.dstATop)),
                 ),
                 alignment: Alignment.bottomCenter,
                 child: WaveWidget(
@@ -105,7 +108,13 @@ class DetailPage extends StatelessWidget {
                     0.03
                   ], blur: const MaskFilter.blur(BlurStyle.solid, 3)),
                   waveAmplitude: 20,
-                  size: const Size(double.infinity, 1 * 300),
+                  size: Size(
+                      double.infinity,
+                      0.2 *
+                          (MediaQuery.of(context).orientation ==
+                                  Orientation.portrait
+                              ? 300
+                              : 150)),
                   // waveAmplitude: 0,
                 ),
               ),
