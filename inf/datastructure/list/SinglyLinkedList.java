@@ -37,6 +37,7 @@ public class SinglyLinkedList {
         }
         IListPosition removed = head;
         head = head.next();
+        n--;
         return removed.value();
     }
 
@@ -79,6 +80,62 @@ public class SinglyLinkedList {
             iterator = iterator.next();
         }
         return null;
+    }
+
+    /**
+     * Splits the current list into two lists based on the given position.
+     * The second list contains the elements after the given position and
+     * is returned by this method. The current list is truncated up to the
+     * given position (included).
+     * 
+     * @param splicePosition the position with respect to which the list
+     * will be spliced.
+     * @return the list created from elements after the given position
+     */
+    public SinglyLinkedList splice(IListPosition splicePosition) {
+        SinglyLinkedList tailList = new SinglyLinkedList();
+        tailList.head = splicePosition.next();
+        splicePosition.setNext(null);
+        IListPosition iterator = tailList.head;
+        while(iterator != null) {
+            tailList.n++;
+            iterator = iterator.next();
+        }
+        n -= tailList.n;
+        return tailList;
+    }
+
+    /**
+     * Merges the current list with the one passed as parameters, the merge
+     * occurs by appending the given list to the last element of the current one.
+     * 
+     * @param other the list to be appended
+     * @return the current list after merging
+     */
+    public SinglyLinkedList merge(SinglyLinkedList other) {
+        // current list is empty
+        if (head == null) {
+            head = other.head;
+            n = other.n;
+            return this;
+        }
+        // Finds the tail of the current list
+        IListPosition last = head;
+        while(last.next() != null) {
+            last = last.next();
+        }
+        last.setNext(other.head);
+        n+= other.n;
+        return this;
+    }
+
+    /**
+     * Gives the number of elements stored in the list.
+     * 
+     * @return the number of elements in the list.
+     */
+    public int size() {
+        return n;
     }
 
     @Override
