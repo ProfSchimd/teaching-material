@@ -4,9 +4,7 @@ public interface ITree {
     ITreeNode[] getNodes();
     ITreeNode[] getLeaves();
     ITreeNode[] getInternalNodes();
-
     int size();
     boolean isEmpty();
-
     ITreeNode search(Object o);
 }
