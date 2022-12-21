@@ -24,7 +24,7 @@ public class BinarySearchTree {
         if (node == null || node.value == key) {
             return node;
         }
-        if (key <= node.value) {
+        if (key < node.value) {
             return recursiveSearch(key, node.left);
         } else {
             return recursiveSearch(key, node.right);
