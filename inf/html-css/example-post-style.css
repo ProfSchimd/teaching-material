@@ -1,0 +1,50 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #EEE;
+    color: #333;
+}
+
+body {
+    padding: 0.5em 12em;
+}
+
+h1, h2, h3, h4 {
+    margin: 0
+}
+
+h3 {
+    color: #555;
+    font-weight: 400;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 1.3rem;
+    font-variant: small-caps;
+    color: #008;
+}
+
+img {
+    float: right;
+    margin: 0px 0px 15px 15px;
+}
+
+em {
+    color: #009;
+    background-color: #CCF;
+    font-style: unset;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+tr, th, td {
+    border: 1px solid gray;
+    padding: 0.5em;
+}
