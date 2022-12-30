@@ -1,0 +1,17 @@
+h1 {
+    font-size: 32pt;
+    color: red;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+}
+.link {
+    color: magenta;
+    font-weight: 800;
+}
+#content {
+    background-color: #FFC;
+    padding: 20px;
+}

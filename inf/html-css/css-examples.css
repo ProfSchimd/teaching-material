@@ -1,0 +1,16 @@
+html {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: antiquewhite;
+    color: #333;
+}
+
+h1 {
+    margin: 10px 50px;
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+}
+
+#content {
+    padding: 5px 50px;
+}
