@@ -7,6 +7,12 @@ a {
     text-decoration: none;
     color: green;
 }
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .link {
     color: magenta;
     font-weight: 800;
@@ -14,4 +20,8 @@ a {
 #content {
     background-color: #FFC;
     padding: 20px;
+}
+
+.emphasis:hover {
+    font-weight: 800;
 }

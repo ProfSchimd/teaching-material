@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>CSS Example</title>
-    <link href="css-example.css" rel="stylesheet">
+    <link href="css-selector-example.css" rel="stylesheet">
 </head>
 <body>
    <a>One <code>a</code> link.</a> <br>
@@ -18,13 +18,17 @@
     <p>
         This is another <code>div</code> that doesn't have the <code>content</code> id.
     </p>
-    <p>
+    <p class="emphasis">
+        This paragraph has <code>emphasis</code> class, so it is bold when the mouse hovers
+        on it.
         This is not the best layout, but it explains the functioning of CSS.
     </p>
     <p>
         Click <a href="css-example.css" target="_blank">here</a> to see the CSS file (you can also
         access the <em>developer tools</em> of the browser and change the CSS on the fly, notice
         that such changes will not affect the file).
+
+        <span class="emphasis">Hover me with the mouse!</span>
     </p>
    </div>
 </body>
