@@ -1,0 +1,148 @@
+{
+    "products": [
+        {
+            "name": "Smartphone Samsung Galaxy S21",
+            "description": "Smartphone Samsung Galaxy S21 5G 128GB Phantom Gray",
+            "price": 999.99,
+            "stock": 10,
+            "pictures": [
+                "./images/samsung_galaxy_s21_1.jpg",
+                "./images/samsung_galaxy_s21_2.jpg",
+                "./images/samsung_galaxy_s21_3.jpg"
+            ]
+        },
+        {
+            "name": "Laptop Dell XPS 13",
+            "description": "Laptop Dell XPS 13 9310 13.4-inch FHD+ Touch Laptop",
+            "price": 1399.99,
+            "stock": 5,
+            "pictures": [
+                "./images/dell_xps_13_1.jpg",
+                "./images/dell_xps_13_2.jpg",
+                "./images/dell_xps_13_3.jpg",
+                "./images/dell_xps_13_4.jpg"
+            ]
+        },
+        {
+            "name": "Smart TV LG OLED55CXPUA",
+            "description": "Smart TV LG OLED55CXPUA 55-inch OLED 4K UHD TV",
+            "price": 1499.99,
+            "stock": 3,
+            "pictures": [
+                "./images/lg_oled_tv_1.jpg",
+                "./images/lg_oled_tv_2.jpg",
+                "./images/lg_oled_tv_3.jpg"
+            ]
+        },
+        {
+            "name": "Wireless Earbuds Sony WF-1000XM4",
+            "description": "Wireless Earbuds Sony WF-1000XM4 Industry Leading Noise Canceling Truly Wireless Earbud",
+            "price": 249.99,
+            "stock": 15,
+            "pictures": [
+                "./images/sony_earbuds_1.jpg",
+                "./images/sony_earbuds_2.jpg"
+            ]
+        },
+        {
+            "name": "Fitness Tracker Fitbit Charge 5",
+            "description": "Fitness Tracker Fitbit Charge 5 with Built-in GPS, 24/7 Heart Rate, Sleep & Swim Tracking",
+            "price": 179.99,
+            "stock": 20,
+            "pictures": [
+                "./images/fitbit_charge_5_1.jpg",
+                "./images/fitbit_charge_5_2.jpg",
+                "./images/fitbit_charge_5_3.jpg"
+            ]
+        },
+        {
+            "name": "Tablet Apple iPad Pro",
+            "description": "Tablet Apple iPad Pro (2021) 12.9-inch Liquid Retina XDR Display with M1 Chip (Wi-Fi, 1TB)",
+            "price": 1799.99,
+            "stock": 2,
+            "pictures": [
+                "./images/ipad_pro_1.jpg",
+                "./images/ipad_pro_2.jpg",
+                "./images/ipad_pro_3.jpg"
+            ]
+        },
+        {
+            "name": "Maglia a maniche corte",
+            "description": "Maglia di cotone con collo a V e maniche corte",
+            "price": 19.99,
+            "stock": 25,
+            "pictures": [
+                "./images/shirt-front.jpg",
+                "./images/shirt-back.jpg",
+                "./images/shirt-side.jpg"
+            ]
+        },
+        {
+            "name": "Jeans skinny",
+            "description": "Jeans stretch a vita alta e gamba stretta",
+            "price": 49.99,
+            "stock": 10,
+            "pictures": [
+                "./images/jeans-front.jpg",
+                "./images/jeans-back.jpg",
+                "./images/jeans-side.jpg"
+            ]
+        },
+        {
+            "name": "Scarpe da corsa",
+            "description": "Scarpe da corsa leggere e traspiranti con suola ammortizzata",
+            "price": 79.99,
+            "stock": 15,
+            "pictures": [
+                "./images/shoes-front.jpg",
+                "./images/shoes-side.jpg",
+                "./images/shoes-top.jpg"
+            ]
+        },
+        {
+            "name": "Borsa a tracolla",
+            "description": "Borsa a tracolla in pelle sintetica con tasche interne ed esterne",
+            "price": 39.99,
+            "stock": 5,
+            "pictures": [
+                "./images/bag-front.jpg",
+                "./images/bag-back.jpg",
+                "./images/bag-inside.jpg",
+                "./images/bag-side.jpg"
+            ]
+        },
+        {
+            "name": "Occhiali da sole",
+            "description": "Occhiali da sole con montatura in acetato e lenti polarizzate",
+            "price": 29.99,
+            "stock": 20,
+            "pictures": [
+                "./images/glasses-front.jpg",
+                "./images/glasses-side.jpg",
+                "./images/glasses-angle.jpg"
+            ]
+        },
+        {
+            "name": "Felpa con cappuccio",
+            "description": "Felpa con cappuccio e tasca a marsupio in morbido pile",
+            "price": 39.99,
+            "stock": 30,
+            "pictures": [
+                "./images/hoodie-front.jpg",
+                "./images/hoodie-back.jpg",
+                "./images/hoodie-side.jpg",
+                "./images/hoodie-closeup.jpg"
+            ]
+        },
+        {
+            "name": "T-shirt a righe",
+            "description": "T-shirt a righe in cotone organico con scollo rotondo",
+            "price": 24.99,
+            "stock": 18,
+            "pictures": [
+                "./images/tshirt-front.jpg",
+                "./images/tshirt-back.jpg"
+            ]
+        }
+    ]
+}
