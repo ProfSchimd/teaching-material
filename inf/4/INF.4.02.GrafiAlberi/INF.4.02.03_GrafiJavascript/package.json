@@ -1,0 +1,14 @@
+{
+  "name": "it.zuccante.inf.jsgraph",
+  "version": "1.0.0",
+  "description": "Javscript graph example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michele Schimd",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}
