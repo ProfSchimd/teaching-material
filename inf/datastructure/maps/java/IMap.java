@@ -39,4 +39,18 @@ interface Map {
      * @return the stored values
      */
     Object[] values();
+
+    /**
+     * Returns the number if paris stored in the map.
+     * 
+     * @return the number of pairs stored
+     */
+    int size();
+
+    /**
+     * Returns {@code True} if the map has no stored pairs, {@code} False otherwise}.
+     * 
+     * @return Whether or not the map is empty.
+     */
+    boolean isEmpty();
 }

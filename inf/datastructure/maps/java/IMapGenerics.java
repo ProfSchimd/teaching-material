@@ -4,4 +4,6 @@ public interface IMapGenerics<K,V> {
     V get(K key);
     K[] keys();
     V[] values();
+    int size();
+    boolean isEmpty();
 }
