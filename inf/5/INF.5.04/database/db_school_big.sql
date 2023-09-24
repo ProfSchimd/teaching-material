@@ -23,14 +23,17 @@ VALUES
     (9, 'Michela', 'Sciascia', '2006-02-22', '2023-02-17 13:00:00', 'Viale Aldo Moro 161', 'michela@example.com'),
     (10, 'Maria', 'Rossi', '2004-06-15', '2023-02-17 13:30:00', 'Via Garibaldi 1/1', 'maria@example.com'),
     (11, 'Marco', 'Ferrari', '2003-07-22', '2023-02-17 14:00:00', 'Via Roma 3', 'marco@email.it'),
-    (12, 'Alessia', 'Bianchi', '2005-05-18', '2023-02-17 14:30:00', 'Via Leonardo da Vinci 7', 'alessia@gmail.com'),
-    (13, 'Luca', 'Conti', '2002-12-10', '2023-02-17 15:00:00', 'Piazza San Marco 5', 'luca@example.com'),
+    (12, 'Alessia', 'Bianchi', NULL, '2023-02-17 14:30:00', 'Via Leonardo da Vinci 7', 'alessia@gmail.com'),
+    (13, 'Luca', 'Conti', NULL, '2023-02-17 15:00:00', NULL, 'luca@example.com'),
     (14, 'Giulia', 'Ricci', '2006-02-28', '2023-02-17 15:30:00', 'Via Dante Alighieri 11', 'giulia@email.it'),
     (15, 'Lorenzo', 'Galli', '2005-11-10', '2023-02-17 16:00:00', 'Piazza del Duomo 2', 'lorenzo@gmail.com'),
-    (16, 'Chiara', 'Martini', '2004-03-19', '2023-02-17 16:30:00', 'Via Verdi 9', 'chiara@example.com'),
+    (16, 'Chiara', 'Martini', '2004-03-19', '2023-02-17 16:30:00', NULL, 'chiara@example.com'),
     (17, 'Davide', 'Moretti', '2008-06-25', '2023-02-17 17:00:00', 'Via Manzoni 6', 'davide@email.it'),
-    (18, 'Valentina', 'Rizzo', '2006-08-08', '2023-02-17 17:30:00', 'Piazza della Repubblica 4', 'valentina@gmail.com'),
-    (19, 'Simone', 'Greco', '2004-10-17', '2023-02-17 18:00:00', 'Via Garibaldi 1/2', 'simone@example.com');
+    (18, 'Valentina', 'Rizzo', NULL, '2023-02-17 17:30:00', 'Piazza della Repubblica 4', 'valentina@gmail.com'),
+    (19, 'Simone', 'Greco', '2004-10-17', '2023-02-17 18:00:00', 'Via Garibaldi 1/2', 'simone@example.com'),
+    (20, 'Mia', 'Fiore', '2007-03-31', '2023-02-17 19:00:00', NULL, 'mia.fiore@example.com'),
+    (21, 'Erik', 'Ferrari', '2007-06-18', '2023-02-18 08:15:00', 'Piazzetta del Sarto 5', 'erferro@gmail.com'),
+    (22, 'Mohammed', 'Ali', '2005-05-21', '2023-02-17 22:23:44', 'Via Adige 1', 'mohammed@example.com');
 
 
 -- Creazione della tabella Teacher
@@ -52,12 +55,14 @@ VALUES
     (3, 'Marco', 'Bianchi', '1990-12-10', '2015-11-30', 'marco@example.com', '332-9182736'),
     (4, 'Anna', 'Russo', '1985-06-03', '2008-08-05', 'anna@example.com', '321-0120120'),
     (5, 'Giuseppe', 'Conti', '1992-11-22', '2017-04-15', 'giuseppe@example.com', '333-33113313'),
-    (6, 'Antonio', 'Marchese', '1992-11-22', '2017-04-15', 'aconte@email.it', '333-33113313'),
-    (7, 'Francesco', 'Noci', '1992-11-22', '2017-04-15', 'francesco.noci@example.com', '333-33113313'),
-    (8, 'Aron', 'Zurlo', '1992-11-22', '2017-04-15', 'aron.zurlo@example.com', '333-33113313'),
-    (9, 'Elena', 'Ferrari', '1992-11-22', '2017-04-15', 'e.ferrari@gmail.com', '333-33113313'),
-    (10, 'Vittoria', 'Olivi', '1992-11-22', '2017-04-15', 'olivi@email.it', '333-33113313'),
-    (11, 'Giuliana', 'Ahmed', '1992-11-22', '2017-04-15', 'giuliana@example.com', '333-33113313');
+    (6, 'Antonio', 'Marchese', NULL, NULL, 'aconte@email.it', NULL),
+    (7, 'Francesco', 'Noci', '1989-01-10', NULL, 'francesco.noci@example.com', '321-9876980'),
+    (8, 'Aron', 'Zurlo', '1966-09-02', NULL, 'aron.zurlo@example.com', '319-11881234'),
+    (9, 'Elena', 'Ferrari', '1982-04-25', NULL, 'e.ferrari@gmail.com', '334-12344321'),
+    (10, 'Vittoria', 'Olivi', NULL, '2017-09-01', 'olivi@email.it', NULL),
+    (11, 'Giuliana', 'Ahmed', '1971-07-29', '2001-01-01', 'giuliana@example.com',NULL),
+    (12, 'Umberto', 'De Conti', '1964-11-04', '2001-01-01', 'umberto@example.com',NULL),
+    (13, 'Antonietta', 'Emiliano', '1985-08-06', '2009-09-01', 'antonietta.emiliano@gmail.com','335-6675846');
 
 
 -- Creazione della tabella Class
