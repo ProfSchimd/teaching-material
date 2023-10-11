@@ -34,6 +34,7 @@ VALUES
     (20, 'Mia', 'Fiore', '2007-03-31', '2023-02-17 19:00:00', NULL, 'mia.fiore@example.com'),
     (21, 'Erik', 'Ferrari', '2007-06-18', '2023-02-18 08:15:00', 'Piazzetta del Sarto 5', 'erferro@gmail.com'),
     (22, 'Mohammed', 'Ali', '2005-05-21', '2023-02-17 22:23:44', 'Via Adige 1', 'mohammed@example.com');
+    (23, 'Alessio', 'Zhu', '2004-12-19', '2022-09-01 10:11:21', 'Corso Milano 33/7', 'zhu@example.com')
 
 
 -- Creazione della tabella Teacher
