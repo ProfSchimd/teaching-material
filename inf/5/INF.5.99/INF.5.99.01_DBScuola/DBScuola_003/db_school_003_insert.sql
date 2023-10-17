@@ -33,16 +33,16 @@ VALUES
 
 INSERT INTO teacher_class (teacher_id, class_id, subject)
 VALUES
-    (1, 1, "Italiano"),
-    (1, 2, "Italiano"),
-    (2, 1, "Matematica"),
-    (2, 3, "Matematica"),
-    (3, 5, "Informatica"),
-    (3, 6, "Sistemi e Reti"),
-    (3, 4, "Sistemi e Reti"),
-    (4, 3, "Scienze Motorie"),
-    (4, 4, "Scienze Motorie"),
-    (5, 1, "Scienze"),
-    (5, 2, "Scienze"),
-    (1, 5, "Italiano");
+    (1, 1, 'Italiano'),
+    (1, 2, 'Italiano'),
+    (2, 1, 'Matematica'),
+    (2, 3, 'Matematica'),
+    (3, 5, 'Informatica'),
+    (3, 6, 'Sistemi e Reti'),
+    (3, 4, 'Sistemi e Reti'),
+    (4, 3, 'Scienze Motorie'),
+    (4, 4, 'Scienze Motorie'),
+    (5, 1, 'Scienze'),
+    (5, 2, 'Scienze'),
+    (1, 5, 'Italiano');
 
