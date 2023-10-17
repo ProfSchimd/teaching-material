@@ -16,5 +16,6 @@ Ogni versione del database è adeguatamente popolata affinché si possa utilizza
 
 #### Lista completa delle *versioni* del DB Scuola
 
-* `DBScuola_001`: Singola tabella `student` con attributi **4 attributi** *id*, *firs_name*, *last_name* e *birth_date* e **12 righe**. 
-* `DBScuola_002`: Tabelle `student` (**5 attributi e 12 righe**) e `class` (**4 attributi 6 righe**) collegate dall'attributo `class` nella tabella `student` (relazione 1 a molti).
+* `DBScuola_001`: Singola tabella `student` con attributi **4 attributi** *id*, *first_name*, *last_name* e *birth_date* e **12 righe**. 
+* `DBScuola_002`: Tabelle `student` (**5 attributi 12 righe**) e `class` (**4 attributi 6 righe**) collegate dall'attributo `class` nella tabella `student` (relazione 1 a molti).
+* `DBScuola_003`: Tabelle `student` (**5 attributi 12 righe**), `class` (**4 attributi 6 righe**), `teacher` (**7 attributi 5 righe**), `teacher_class` (collegamento tra `teacher` e `class` con attributo `subject`).
