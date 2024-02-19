@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS user(
+    user_id INT PRIMARY KEY,
+    email VARCHAR(128) UNIQUE NOT NULL,
+    password VARCHAR(128) NOT NULL
+);
+
+INSERT INTO user (user_id, email, password)
+VALUES
+    (1, 'alice@email.com', 'qwerty'),
+    (2, 'bob@email.com', '12345678'),
+    (3, 'charlie@email.com', 'charlie76'),
+    (4, 'deborah@email.com', '12345678'),
+    (5, 'emily@email.com', 'Em!1Y_W4t50N'),
+    (6, 'fred@email.org', 'd1Xj80o!wj3l1'),
+    (7, 'george@email.com', '0G1e2r3g4e6');
