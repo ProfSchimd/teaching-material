@@ -1,0 +1,15 @@
+{
+    "clothes": [
+        { 
+            "id": "001",
+            "description": "Nike Air Rosse",
+            "price": "299"
+        },
+        { 
+            "id": "002",
+            "description": "Nike Air Bianche",
+            "price": "499"
+        }
+
+    ]
+}
