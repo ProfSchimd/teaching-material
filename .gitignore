@@ -1,4 +1,12 @@
+# Mac OS
 .DS_Store
+
+# Java
 *.class
-node_modules/
 .gradle/
+
+# Node installation
+node_modules/
+package-lock.json
+package.json
+
