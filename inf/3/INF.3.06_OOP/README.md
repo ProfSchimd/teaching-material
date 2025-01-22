@@ -20,3 +20,23 @@ public class Person {
   } 
 }
 ```
+
+### Campi, metodi e visibilità
+
+Un **campo** è una *variabile* associata all'istanza e definita nella classe. Un **metodo** è una *procedura* o una *funzione* che può essere invocato su un istanza.
+
+Campi e metodi possono avere visibilità `public` o `private`, nel primo caso è possibile utilizzarli in qualsiasi parte del codice, nel secondo caso è possibile accedervi solo all'interno della classe in cui sono definiti che è quindi lo **scope** del campo o metodo. 
+
+Ad esempio, nel codice sopra `firstName` è un campo con visibilità `private` mentre `age()` è un metodo con visibilità `public`.
+
+### Il metodo *costruttore*
+
+Il **costruttore** è un metodo "speciale" che ha lo stesso nome della classe (anche maiscuole e minuscole), non ha un tipo restituito e che viene invocato all'atto della creazione dell'oggetto.
+
+```
+Person john = new Person(); // qui si chiama il costruttore
+```
+
+## Campi e metodi `static`
+Quando un campo o un metodo viene indicato coome `static`, allora diventa un campo o metodo *di classe* anziché di istanza. Ovviamente, un metodo di classe **non** può accedere a metodi o campi di istanza.
+
