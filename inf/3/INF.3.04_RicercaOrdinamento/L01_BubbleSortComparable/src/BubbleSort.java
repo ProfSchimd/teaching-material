@@ -25,12 +25,12 @@ public class BubbleSort {
     //     }
     // } 
 
-    public static void bubbleSort(Compare[] a) {
+    public static void bubbleSort(Comparable[] a) {
         int n = a.length;
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
-                if (!(a[j].lessThen(a[j + 1]))) {
-                    Compare temp = a[j];
+                if (a[j].compareTo(a[j + 1]) > 0)  {
+                    Comparable temp = a[j];
                     a[j] = a[j + 1];
                     a[j + 1] = temp;
                 }
