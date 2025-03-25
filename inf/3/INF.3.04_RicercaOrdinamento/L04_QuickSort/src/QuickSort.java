@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class QuickSort {
 
     public static void printArray(int[] a) {
@@ -37,7 +39,7 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {10, 7, 8, 9, 1, 5};
+        int[] arr = {10, 3, 1, 1, 1, 1};
         int n = arr.length;
         
         System.out.println("Original array:");
@@ -47,5 +49,15 @@ public class QuickSort {
         
         System.out.println("Sorted array:");
         printArray(arr);
+
+        arr = new int[1 << 20];
+        Random r = new Random();
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = r.nextInt(10000);
+        }
+        quickSort(arr, n, arr.length-1);
+        for (int i = 0; i < 30; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 }
