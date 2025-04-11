@@ -42,10 +42,23 @@ Gli ambienti di esecuzione di Javascript
 ### Lezione 3 - Hello Anonymous Function (`JS.02.L03`)
 Funzioni
 - Funzioni: sintassi, parametri e `return`
-- Funzioni anonime: sintassi, closuer
+- Funzioni anonime: sintassi, closure
 - Cenni di `async` e `await`
 
 [more](./JS.01.L03.HelloAnonymouFunction/)
+
+### Lezione 4 - Array
+
+
+### Lezione 5 - Oggetti
+Oggetti
+- Cos'è un oggetto
+- Sintassi per l'accesso agli attributi
+- Sintassi per la definizione e l'uso di metodi
+Spread operatore
+- Sintassi
+- Utilizzo con array
+- Utilizzo con oggetti
 
 
 [1]: https://nodejs.org/en

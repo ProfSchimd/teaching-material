@@ -88,6 +88,9 @@ console.log("BARISTA: Cos'è quel muso lungo? 😂");
 
 Ricorda che la barzelletta non fa ridere senza l'emoji finale, guarda [qui](https://www.compart.com/en/unicode/block/U+1F600). Però c'è poca *suspense* nel tuo modo di raccontare le barzellette, [guarda cosa faccio io](./src/timeout.js). Forse il codice non ti sarà molto chiaro, ma quanto meglio è!? Sto anche preparando un sito web, guarda [qui](./src/barzellette.html) se vuoi darmi una mano (lo so che sono un po' indietro, ma potresti aiutarmi tu!).
 
+## Condizioni e cicli
+
+
 ## Riassunto
 Ecco quello che abbiamo visto oggi con John Smith
 - Stampare con `console.log`.
