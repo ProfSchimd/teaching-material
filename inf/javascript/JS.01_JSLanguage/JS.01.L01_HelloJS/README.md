@@ -90,10 +90,90 @@ Ricorda che la barzelletta non fa ridere senza l'emoji finale, guarda [qui](http
 
 ## Condizioni e cicli
 
+Un linguaggio senza condizioni e cicli sarebbe non sarebbe molto utile, allora vediamo di cosa prevede il linguaggio javascript. 
+
+### Condizioni `if...else`
+
+```js
+const d = new Date();
+let hour = d.getHours();
+if (hour > 12) {
+    console.log("Un cavallo 🐎 entra in un bar.");
+    console.log("BARISTA: Cos'è quel muso lungo? 😂");
+} else {
+    console.log("👩‍⚕️ Dottore, dottore! Ho solo 59 secondi di vita, mi aiuti!");
+    console.log("Certo! Un minuto e sono da lei! 😂");
+}
+```
+
+Come si vede dall'esempio, la sintassi di un `if...else` è uguale a quella di molti linguaggio (ad esempio Java), ovviamente è anche possibile usare `if` senza `else`
+
+```js
+let d = -1.23;
+if (d < 0) {
+    d = -d;
+}
+console.log(`d = ${d}`);
+```
+
+### Il matching con `switch`
+
+In Javascript esiste anche l'istruzione `switch` che è esegue i rami i ui *casi* corrispondono, ad esempio il codice che segue stampa a console la stringa `two` (prova a cambiare il valore di `value` per vedere cosa stampa il codice).
+
+```js
+const value = 2;
+switch (value) {
+    case 0:
+        console.log("zero");
+        break;
+    case 1:
+        console.log("one");
+        break;
+    case 2:
+        console.log("two");
+        break;
+    default:
+        console.log(value);
+        break;
+}
+```
+
+### L'operatore ternario (if aritmetico)
+Molti linguaggi (tra cui Java e C++) possiedono un *operatore ternario* (a volte chiamato *if aritmetico*) che rappresenta un'*espressione* il cui valore dipende da una condizione. Consideriamo il codice che segue
+
+```js
+const d = new Date();
+let hour = d.getHours();
+let color = "black"; 
+if (hour < 12) {
+    color = "white";
+}
+```
+
+Un problema con questo codice è che non posso utilizzare `const` per la variabile `color` anche se so che non cambierà mai durante l'esecuzione del programma. Il problema è che vorremmo il valore di `color` dipendesse da una condizione, tipo *se è prima di mezzogiorno usa il colore nero altrimenti usa il colore bianco*. L'operatore ternario serve proprio a questo scopo.
+
+```js
+const d = new Date();
+let hour = d.getHours();
+const color = hour < 12 ? "white" : "black";
+```
+
+L'operatore ternario è costituito di tre parti:
+1. una **condizione** che precede il simbolo `?`;
+2. un'espressione che sarà il risultato se la condizione in 1. è vera e
+3. una seconda espressione che sarà il risultato se la condizione in 1. è falsa.
+
+### Esercizi sulle condizioni
+
+1. Scrivere il codice per 
+
+
+### I *for each*
 
 ## Riassunto
 Ecco quello che abbiamo visto oggi con John Smith
 - Stampare con `console.log`.
 - Definire variabili `let` e costanti `const` (abbiamo visto anche `var`, ma è da *boomer*).
 - String template come `Hello ${nome}`.
+- Condizioni: `if..else`, `switch` e `... ? ... : ...`.
 
