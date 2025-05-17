@@ -168,7 +168,42 @@ L'operatore ternario è costituito di tre parti:
 1. Scrivere il codice per 
 
 
-### I *for each*
+### Cicli `for`, `while` e `do ... while`
+Se hai già studiato altri linguaggi, sicuramente sai cosa sono i **cicli** (*loop*). In Javascript esistono diversi tipi di cicli, tra cui i conosciutissimi `for`, `while` e `do..while`
+
+
+```js
+const n = 10;
+for (let i = 0; i < n; i++) {
+    console.log(`${i} squared is ${i*i} while cubed is ${i*i*i}`);
+}
+```
+
+```js
+let j = 0;
+while(j < n) {
+    console.log(`The square root of ${j} is ${Math.sqrt(j)}`);
+    j++;
+}
+```
+
+```js
+let x = -10;
+do {
+    console.log(`10^${x} is ${Math.pow(10,x)}`);
+    x++;
+} while(x <= 0);
+```
+
+Esistono altri due tipi di `for` che chiamiamo *for each*, ma prima di vederli dovrai imparare meglio come si usano gli array in JS e ormai è tardi e ora di finire questa lezione.
+
+## Numeri casuali
+Ti va di fare un gioco? Facciamo la *morra cinese* (forse la conosci come *sasso-carta-forbice*). Le regole sono semplici
+- ci sono due giocatori,
+- contemporaneamente ciascun giocatore sceglie uno tra: carta 📄 , forbice ✂️ e sasso 🪨
+- se i due fanno la stessa scelta c'è un pareggio altrimenti
+- carta vince su sasso - sasso vince su forbice -- forbice vince su carta
+
 
 ## Riassunto
 Ecco quello che abbiamo visto oggi con John Smith

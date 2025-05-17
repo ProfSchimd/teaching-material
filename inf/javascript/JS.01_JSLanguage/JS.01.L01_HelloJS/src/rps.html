@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissor</title>
+    <script src="rps.js"></script>
+    <style>
+        li {
+            list-style-type: none;
+            display: inline;
+            font-size: 4rem;
+            margin: 5px;
+        }
+        ul input {
+            font-size: 4rem;
+            margin: 5px;
+        }
+        span.draw {
+            color: gray;
+        }
+        span.win {
+            color: green;
+        }
+        span.loose {
+            color: red;
+        }
+    </style>
+</head> 
+<body>
+    <div id="content">
+        <h1>Rock-Paper-Scissor</h1>
+        <ul id="chooser">
+            <li><input type="button" id="rockButton" value="🪨"></li>
+            <li><input type="button" id="paperButton" value="📄"></li>
+            <li><input type="button" id="scissorButton" value="✂️"></li>
+        </ul>
+        <ul id="result">
+            <li id="playerChoice">👤</li>
+            <li id="botChoice">🤖</li>
+        </ul>
+        <button id="goButton" disabled>GO!</button>
+        <p id="resultP">
+
+        </p>            
+    </div>
+</body> 
+</html>

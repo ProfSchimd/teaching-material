@@ -26,7 +26,8 @@ Al termine di questo modulo si dovrà sviluppare un semplice gioco *Guess the nu
 Introduzione del linguaggio e sua breve storia.
 - Output con `console.log`
 - Variabili: tipi, `let`, `const`
-- Costrutti di controllo del flusso `if`, `for` e `while`.
+- Costrutti di controllo del flusso `if`, `switch`, `for` e `while`
+- Operatore ternario `... ? ... : ...`
 
 [more](./JS.01.L01_HelloJS/)
 
