@@ -8,3 +8,6 @@
 
 ### Strumenti di sviluppo
 - [Node JS](https://nodejs.org/)
+
+### Materiale di studio
+- [Design Pattern per WebApp](https://www.patterns.dev/)

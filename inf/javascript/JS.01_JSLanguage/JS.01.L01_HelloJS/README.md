@@ -1,8 +1,8 @@
 # Hello JS (`JS.01.L01`)
 
-Benvenuto, sono **John Smith** ed oggi ti voglio raccontare la mia storia. Sono nato nel 1993 in una cittadina che si chiama *Mosaic* in California, presto però mi sono trasferito in una cittadina chiamata Nevig meglio nota oggi come *Volpe di Fuoco*.
+Benvenuto, sono **John Smith** ed oggi ti voglio raccontare la mia storia. Sono nato nel 1993 in una cittadina che si chiama *Mosaic* in California, presto però mi sono trasferito in una cittadina chiamata Nevig, meglio nota oggi come *Volpe di Fuoco*.
 
-Proviamo a fare amicizia con il seguente [codice](./src/hello_js.js). Puoi scrivere ogni riga nella **Console sviluppatore** del tuo browser (quella cosa strana che compare quando, per sbaglio, previ `F12` nel browser). Puoi usare [NodeJS](https://nodejs.org/) (che però devi installare...). Per iniziare subito puoi provare uno dei tanti tool Javascript che sono disponibili online ([Programiz](https://www.programiz.com/javascript/online-compiler/), [Stackblitz](https://stackblitz.com/))
+Proviamo a fare amicizia con il seguente [codice](./src/hello_js.js). Puoi scrivere ogni riga nella **Console sviluppatore** del tuo browser (quella cosa strana che compare quando, per sbaglio, previ `F12` nel browser). Puoi usare [NodeJS](https://nodejs.org/) (che però devi installare...). Per iniziare subito puoi provare uno dei tanti tool JavaScript che sono disponibili online ([Programiz](https://www.programiz.com/javascript/online-compiler/), [Stackblitz](https://stackblitz.com/))
 
 ```js
 console.log('Hello stranger!');
@@ -15,14 +15,14 @@ const age = 2025 - 1993;
 console.log("I am " + age + " years old");
 ```
 
-## Tipi di dati in Javascript
-Come tutti i linguaggi, anche Javascript ha i tipi (sono dei *tipi strani* però), ecco come si chiamano (alcuni dettagli li vedremo nelle prossime lezioni).
+## Tipi di dati in JavaScript
+Come tutti i linguaggi, anche JavaScript ha i tipi (anche se un po' strani), ecco come si chiamano (alcuni dettagli li vedremo nelle prossime lezioni).
 
 ```js
 console.log(typeof(123)); // number
 console.log(typeof(123.456)); // number
 console.log(typeof(false)); // boolean
-console.log(typeof("Hello")); // boolean
+console.log(typeof("Hello")); // string
 console.log(typeof(undefined)); // undefined
 console.log(typeof(null)); // object
 console.log(typeof(Symbol())); // symbol
@@ -32,7 +32,7 @@ console.log(typeof(1234n)); // bigint
 - Interi e float sono tutti di tipo `number`
 - I booleani sono di tipo `boolean` con i soliti valori `true` e `false`
 - Le stringhe di caratteri sono di tipo `string`
-- Esiste un tipo misterioso che si chiama `undefined` cha il solo valore `undefined`
+- Esiste un tipo misterioso che si chiama `undefined` che ha il solo valore `undefined`
 - Esiste anche `object` di cui ci occuperemo nelle prossime lezioni
 - Infine ci sono altri due tipi che non utilizzeremo e che sono `bigint` e `symbol`
 
@@ -45,13 +45,13 @@ stampa una stringa, ma fa molto di più. Se hai provato il codice ti sarai accor
 
 
 
-## Facciamo un po' di workout
+## Esercizi pratici
 
 ### Esercizio 1
 Utilizza le stringhe template per stampare a video i seguenti messaggi
 ```
 Il mio laptop è 14 pollici.
-Un pollice sono 2,54 cm.
+Un pollice è 2,54 cm.
 Il mio laptop è 35,56 cm.
 ```
 Non imbrogliare usa le template strings è la costante
@@ -59,13 +59,13 @@ Non imbrogliare usa le template strings è la costante
 const CM_IN_INCH = 2.54;
 ```
 
-Sempre utilizzando le string template, stampa il seguente messaggio
+Sempre utilizzando le *template string*, stampa il seguente messaggio
 ```
 La mia auto ha i cerchioni da 18 pollici.
 Quindi il loro diametro è ... cm.
 L'area del mio cerchione è ... cm2.
 ```
-Senza imbrogliare calcola e stampa il diametro e l'area dei cerchioni. Puoi usare la costante PI presente nella libreria `Math` di Javascript.
+Senza imbrogliare calcola e stampa il diametro e l'area dei cerchioni. Puoi usare la costante PI presente nella libreria `Math` di JavaScript.
 ```js
 console.log(Math.PI); // 3.141592653589793
 ```
@@ -90,7 +90,7 @@ Ricorda che la barzelletta non fa ridere senza l'emoji finale, guarda [qui](http
 
 ## Condizioni e cicli
 
-Un linguaggio senza condizioni e cicli sarebbe non sarebbe molto utile, allora vediamo di cosa prevede il linguaggio javascript. 
+Un linguaggio senza condizioni e cicli non sarebbe molto utile, allora vediamo di cosa prevede il linguaggio javascript. 
 
 ### Condizioni `if...else`
 
@@ -118,7 +118,7 @@ console.log(`d = ${d}`);
 
 ### Il matching con `switch`
 
-In Javascript esiste anche l'istruzione `switch` che è esegue i rami i ui *casi* corrispondono, ad esempio il codice che segue stampa a console la stringa `two` (prova a cambiare il valore di `value` per vedere cosa stampa il codice).
+In JavaScript esiste anche l'istruzione `switch` che esegue i rami i cui *casi* corrispondono, per esempio, il codice seguente stampa a console la stringa `two` (prova a cambiare il valore di `value` per vedere cosa stampa il codice).
 
 ```js
 const value = 2;
@@ -169,7 +169,7 @@ L'operatore ternario è costituito di tre parti:
 
 
 ### Cicli `for`, `while` e `do ... while`
-Se hai già studiato altri linguaggi, sicuramente sai cosa sono i **cicli** (*loop*). In Javascript esistono diversi tipi di cicli, tra cui i conosciutissimi `for`, `while` e `do..while`
+Se hai già studiato altri linguaggi, sicuramente sai cosa sono i **cicli** (*loop*). In JavaScript esistono diversi tipi di cicli, tra cui i conosciutissimi `for`, `while` e `do..while`
 
 
 ```js
@@ -211,4 +211,13 @@ Ecco quello che abbiamo visto oggi con John Smith
 - Definire variabili `let` e costanti `const` (abbiamo visto anche `var`, ma è da *boomer*).
 - String template come `Hello ${nome}`.
 - Condizioni: `if..else`, `switch` e `... ? ... : ...`.
+
+## 🚀 Preparati al prossimo livello!
+Hai fatto un ottimo lavoro fin qui: hai mosso i primi passi nel mondo di JavaScript e hai già incontrato concetti fondamentali come variabili, stringhe, condizioni e cicli. Ma questo è solo l'inizio! Nelle prossime lezioni inizieremo a usare JavaScript in ambienti reali: scriveremo codice che gira sia nel browser, per creare pagine web interattive, sia in Node.js, per costruire strumenti e applicazioni lato server.
+
+Per arrivare preparato, esercitati il più possibile: ripeti gli esempi, prova a modificarli, crea i tuoi mini programmi. Anche gli errori fanno parte del viaggio — ogni errore ti insegna qualcosa che un successo non potrebbe. 💪
+
+La vera forza di un programmatore è nella costanza e nella curiosità: continua a sperimentare, e molto presto vedrai il tuo codice prendere vita! 🧠⚙️✨
+
+Ci vediamo alla prossima lezione!
 

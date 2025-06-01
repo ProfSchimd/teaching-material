@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Browser!</title>
+    <p>See the <b>developer console</b> (Press <code>F12</code>).</p>
+</head>
+<body>
+    
+<script>
+function getBrowserName() {
+  const userAgent = navigator.userAgent;
+
+  if (userAgent.includes("Firefox")) {
+    return "Firefox";
+  } else if (userAgent.includes("Edg")) {
+    return "Edge";
+  } else if (userAgent.includes("Chrome") && !userAgent.includes("Edg")) {
+    return "Chrome";
+  } else if (userAgent.includes("Safari") && !userAgent.includes("Chrome")) {
+    return "Safari";
+  } else if (userAgent.includes("OPR") || userAgent.includes("Opera")) {
+    return "Opera";
+  } else {
+    return "Unknown";
+  }
+}
+
+console.log(`Hello from ${getBrowserName()} Browser!`);
+
+</script>
+</body>
+</html>
