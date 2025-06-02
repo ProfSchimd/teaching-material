@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le migliori barzellette</title>
+    
+</head>
+<body>
+<input type="button" id="next" value="Next">
+<p id="content">
+
+</p>
+<script>
+window.addEventListener('load', () => {
+    const button = document.querySelector("#next");
+    button.addEventListener('click', () => {
+        const content = document.querySelector("#content");
+        content.innerHTML = "Un cavallo 🐎 entra in un bar...<br>";
+        setTimeout(() => content.append("BARISTA: Cos'è quel muso lungo? 😂"), 1500);
+    })
+})
+</script>
+</body>
+</html>

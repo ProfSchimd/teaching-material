@@ -1,0 +1,25 @@
+body {
+    width: 70% auto;
+    font-family: serif;
+}
+
+h1 {
+	transition-property: color;
+	transition-duration: 0.8s;
+	color: blue;
+}
+
+h1:hover {
+	color: red;
+}
+
+.invisible {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.8s;
+}
+
+.visible {
+    opacity: 1;
+}
+

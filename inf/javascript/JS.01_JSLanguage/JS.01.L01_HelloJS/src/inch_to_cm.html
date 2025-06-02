@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inch to centimeters</title>
+</head>
+<body>
+    <label for="inches">Inches</label>
+    <input type="text" id="inches" name="inches">
+    <input type="button" id="convert" value="Convert">
+    <p id="converted">
+
+    </p>
+</body>
+<script>
+window.addEventListener('load', () => {
+    const button = document.querySelector("#convert");
+    button.addEventListener('click', () => {
+        const input = document.querySelector("#inches");
+        const converted = document.querySelector("#converted");
+        // input contains a property value that is a string
+        console.log(input.value);
+        // Javascript has a function parseInt(...) to convert string to int
+        // complete the following (put something where ... are)
+        const inches = ...
+        converted.innerHTML = `${inches * ...} cm`;
+    })
+})
+</script>
+</html>
