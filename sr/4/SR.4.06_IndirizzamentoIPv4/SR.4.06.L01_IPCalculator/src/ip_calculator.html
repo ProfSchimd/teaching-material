@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Calculator - 0.1</title>
+    <style>
+        body {
+            margin: 0 13% 0 13%;
+            padding: 20px;
+            color: #000088;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        table {
+            margin-top: 1rem;
+            border: 1px solid #000077;
+            border-collapse: collapse;
+            
+        }
+        td {
+            padding: 10px;
+            border: 1px solid #000077;
+            font-size: 1rem;
+        }
+        thead td {
+            border: 1px solid #000077;
+            width: 13rem;
+            padding: 5px;
+            background-color: #CCCCFF;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .alert {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>IP Calculator</h1>
+    <p>
+        Calculate mask from required hosts:
+        <input type="number" min=0 id="requiredHosts" placeholder="Hosts", style="width: 6em">
+        <input type="button" id="hostButton" value="Mask">
+    </p>
+    <input type="number" min=0 max=255, id="netA" placeholder="192" style="width: 4em">.
+    <input type="number" min=0 max=255, id="netB" placeholder="168" style="width: 4em">.
+    <input type="number" min=0 max=255, id="netC" placeholder="1" style="width: 4em">.
+    <input type="number" min=0 max=255, id="netD" placeholder="0" style="width: 4em"> <span style="font-size: 1.5rem">/</span>
+    <input type="number" min=0 max=32, id="netMask" placeholder="24" style="width: 3em">
+    <input type="button" id="buttonGo" value="Go">
+    <p>
+        <span id="alertSpan" class="alert"></span>
+    </p>
+    <table>
+        <thead>
+            <td>Network</td>
+            <td>Mask</td>
+            <td>Broadcast</td>
+            <td>First</td>
+            <td>Last</td>
+        </thead>
+        <tr>
+            <td id="tdNetwork">-</td>
+            <td id="tdMask">-</td>
+            <td id="tdBroadcast">-</td>
+            <td id="tdFirst">-</td>
+            <td id="tdLast">-</td>
+        </tr>
+    </table>
+</body>
+<script>
+function maskFromHosts(N) {
+    return 32-Math.ceil(Math.log2(N+2));
+}
+function getNetworkIP(ip, mask) {
+    return ip.map( (_,i) => ip[i] & mask[i] );
+}
+
+function getBroadcastIP(ip, mask) {
+    return ip.map( (_,i) => ip[i] | (255-mask[i]));
+}
+
+function ipEqual(ip1, ip2) {
+    return ip1.every( (_,i) => ip1[i] === ip2[i]);
+}
+
+function toDottedIP(ip) {
+    return ip.join(".");
+}
+
+function networkMask(m, dotted=true) {
+    let bits = ("1".repeat(m) + "0".repeat(32-m));
+    if (dotted) {
+       bits =  bits.slice(0,8) + '.' + bits.slice(8,16) + '.' + bits.slice(16,24) + '.' + bits.slice(24);
+    }
+    return bits;
+}
+
+function dottedToOctet(ip, base=10) {
+    return ip.split(".").map(s => parseInt(s,base));
+}
+
+function readNetwork() {
+    const ip = [
+        parseInt(document.querySelector("#netA").value),
+        parseInt(document.querySelector("#netB").value),
+        parseInt(document.querySelector("#netC").value),
+        parseInt(document.querySelector("#netD").value),
+        parseInt(document.querySelector("#netMask").value)
+    ];
+    return ip
+}
+window.addEventListener('load', () => {
+    const buttonGo = document.querySelector("#buttonGo");
+    buttonGo.addEventListener('click', (e) => {
+
+        const tdNetwork = document.querySelector("#tdNetwork");
+        const tdMask = document.querySelector("#tdMask");
+        const tdBroadcast = document.querySelector("#tdBroadcast");
+        const tdFirst = document.querySelector("#tdFirst");
+        const tdLast = document.querySelector("#tdLast");
+        
+        let ip = readNetwork();
+        const m = ip.pop();
+
+        const mask = dottedToOctet(networkMask(m), 2);
+        const network = getNetworkIP(ip, mask);
+        const broadcast = getBroadcastIP(network, mask);
+        const last = [...broadcast];
+        last[3]--;
+        const first = [...network];
+        first[3]++;
+        
+        const alertSpan = document.querySelector("#alertSpan");
+        alertSpan.innerHTML = ipEqual(ip, network) ? `` : `<b>Attention</b> network address ${toDottedIP(ip)} invalid for mask ${toDottedIP(mask)}`;
+
+        tdNetwork.innerHTML = `<code>${toDottedIP(network)}</code>`;
+        tdMask.innerHTML = `<code>${toDottedIP(mask)}</code>`
+        tdBroadcast.innerHTML = `<code>${toDottedIP(broadcast)}</code>`;
+        tdFirst.innerHTML = `<code>${toDottedIP(first)}</code>`;
+        tdLast.innerHTML = `<code>${toDottedIP(last)}</code>`;
+    })
+
+    const maskButton = document.querySelector("#hostButton");
+    maskButton.addEventListener('click', () => {
+        const requiredHosts = document.querySelector("#requiredHosts");
+        const netMask = document.querySelector("#netMask");
+        netMask.value = maskFromHosts(parseInt(requiredHosts.value));
+    });
+});
+</script>
+</html>
