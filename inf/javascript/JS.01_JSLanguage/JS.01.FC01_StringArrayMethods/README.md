@@ -1,4 +1,4 @@
-# Approfondimento su metodi di stringhe e array (`JS.01.F01`)
+# Approfondimento su metodi di stringhe e array (`JS.01.FC01`)
 
 **Flipped Classroom** questa attività è più proficua se condotta in modalità *flipped classroom*. A ciascun alunno viene assegnato uno o più metodi e deve preparare una breve (5 minuti massimo) presentazione o video tutorial che spieghi il metodo utilizzando esempi possibilmente all'interno di un progetto realistico.
 
