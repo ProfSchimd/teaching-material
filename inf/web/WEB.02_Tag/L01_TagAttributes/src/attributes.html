@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes of tags</title>
+    <style>
+        .html-tag {
+            background-color: #DDDDDD;
+            padding: 3px 5px;
+            border-radius: 8px;
+        }
+        .important {
+            background-color: #FDD;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="title">Title of the page</h1>
+        <div id="content">
+            This is the main part of the page and should be presented as such.
+            <div id="content">
+                Oops, the <code class="html-tag">div</code> of this text has the same id <code>content</code> of the <code class="html-tag">div</code> that contains the whole main part. <span style="color: red">This could be a disaster</span>
+                <p>
+                    Remember that <code class="important html-tag">&lt;html&gt;</code> is an important HTML tag. This tag <span style="color: blue; font-weight: bold">defines the whole HTML document</span>.
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

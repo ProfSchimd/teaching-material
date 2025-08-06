@@ -88,3 +88,5 @@ In questa lezione abbiamo visto:
 - Come inserire lo stile CSS all'interno di un documento HTML
 - Il selettore di tag CSS
 - Le proprietà CSS `color`, `background-color`, `padding`.
+
+## Dizionario
