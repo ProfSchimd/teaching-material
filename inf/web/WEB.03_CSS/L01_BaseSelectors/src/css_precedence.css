@@ -1,0 +1,16 @@
+/* Selettori per tipo */
+body {
+    
+    color: blue;
+}
+p {
+    color: gray;
+}
+/* Selettore per classe */
+.alert {
+    color: red;
+}
+/* Selettore per id */
+#message {
+    color: green;
+}

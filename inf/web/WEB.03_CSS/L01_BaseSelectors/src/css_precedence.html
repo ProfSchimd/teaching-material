@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La precedenza nelle regole CSS</title>
+    <link rel="stylesheet" href="css_precedence.css">
+</head>
+<body>
+    <h1>Le precedenze in CSS</h1>
+    Questo testo non è all'interno di un <code>&\lt;&\gt</code>, quindi ha il colore definito a livello globale, in questo caso definito nel <code>body</code> (stesso colore del titolo).
+    <p>
+        Questo paragrafo non ha nessuna classe e non ha id, quindi il suo colore è definito dal selettore <code>p { ... }</code>.
+    </p>
+    <p class="alert">
+        Questo paragrafo ha classe <code>red</code> per la quale è stato dato il colore rosso.
+    </p>
+    <p id="message" class="red">
+        Questo paragrafo ha sia la classe <code>red</code> sia l'id <code>message</code>. Il colore viene scelto utilizzando il selettore più specifico che è quello basato su id.
+    </p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilizzo dell'attributo style per i fogli di stile</title>
+    <style>
+        body {
+            color: darkslategray;
+        }
+        code {
+            background-color: lightgray;
+            padding: 4px 3px;
+            border-radius: 5px;
+        }
+        .title {
+            color: red;
+            margin: 0;
+            padding: 5px;
+        }
+        .marker {
+            background-color: yellow;
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="title">Titolo</h1>
+        <h2 class="title">Sottotitolo</h2>
+        <p>
+            Titolo e sottotitolo hanno lo stesso stile (guarda il sorgente HTML utilizzando gli <i>strumenti di sviluppatore</i> del browser). Avendo deciso di aggiungere lo stile attraverso l'attributo <code>style</code> siamo costretti a ripetere lo stile ogni volta.
+        </p>
+        <p>
+            Inoltre, sempre guardando il codice sorgente, noterai che ogni volta che è necessario assegnare uno stile <span class="marker">il codice HTML diventa difficile da leggere perché interrotto dai vari stili.</span>
+        </p>
+    </div>
+</body>
+</html>
