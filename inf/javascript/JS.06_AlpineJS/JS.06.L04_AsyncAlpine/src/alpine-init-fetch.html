@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Utilizzare async await in AlpineJS</title>
+</head>
+
+<body>
+    <div x-data="{name: 'John', deck_id: undefined}" x-init="deck_id = await newDeck()">
+        Hello <span x-text="name"></span> <br />
+        <span x-text="deck_id || 'No deck'"></span>
+
+    </div>
+
+</body>
+<script>
+    async function newDeck() {
+        const deck = await fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1");
+        const jsonDeck = await deck.json();
+        console.log(jsonDeck.deck_id);
+        return jsonDeck.deck_id;
+    }
+</script>
+
+</html>

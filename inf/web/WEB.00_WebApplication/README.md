@@ -36,3 +36,10 @@ Questa attività pratica prevede che si realizzi una semplice applicazione web:
 - Si utilizzano diversi browser per interrogare il web server ed analizzare il contenuto (HTML) ricevuto
 - Opzionalmente si possono utilizzare strumenti tipo `curl` per simulare altri tipi di client
 - Opzionalmente si può usare `NodeJS` per un semplicissimo server dinamico.
+
+## Dizionario delle capacità
+- [ ] Che cosa è una web application e quali sono gli elementi necessari al suo funzionamento?
+- [ ] Come faccio a capire che sto utilizzando una web application? Quali sono gli indizi?
+- [ ] Come si interagisce con una web application?
+- [ ] Che cosa posso scambiare attraverso una web application?
+- [ ] Quali sono i punti deboli nella sicurezza di una web application?
