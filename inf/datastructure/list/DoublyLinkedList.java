@@ -30,7 +30,7 @@ public class DoublyLinkedList {
     public IListPosition search(Object o) {
         IListPosition iterator = head;
         while(iterator != null) {
-            if(iterator.value().equals(o)) {
+            if(iterator.content().equals(o)) {
                 return iterator;
             }
             iterator = iterator.next();
@@ -43,7 +43,7 @@ public class DoublyLinkedList {
         String str = "H <-> ";
         IListPosition iterator = head;
         while(iterator != null) {
-            str += iterator.value().toString() + " <-> ";
+            str += iterator.content().toString() + " <-> ";
             iterator = iterator.next();
         }
         str += "T";

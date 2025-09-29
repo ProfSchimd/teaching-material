@@ -38,7 +38,7 @@ public class SinglyLinkedList {
         IListPosition removed = head;
         head = head.next();
         n--;
-        return removed.value();
+        return removed.content();
     }
 
     /**
@@ -61,7 +61,7 @@ public class SinglyLinkedList {
     public Object removeAfter(IListPosition pos) {
         IListPosition removed = pos.next();
         pos.setNext(removed.next());
-        return removed.value();
+        return removed.content();
     }
 
     /**
@@ -74,7 +74,7 @@ public class SinglyLinkedList {
     public IListPosition search(Object o) {
         IListPosition iterator = head;
         while(iterator != null) {
-            if(iterator.value().equals(o)) {
+            if(iterator.content().equals(o)) {
                 return iterator;
             }
             iterator = iterator.next();
@@ -143,7 +143,7 @@ public class SinglyLinkedList {
         String str = "H -> ";
         IListPosition iterator = head;
         while(iterator != null) {
-            str += iterator.value().toString() + " -> ";
+            str += iterator.content().toString() + " -> ";
             iterator = iterator.next();
         }
         str += "null";

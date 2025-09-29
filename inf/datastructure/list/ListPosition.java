@@ -11,7 +11,7 @@ public class ListPosition implements IListPosition {
     }
 
     @Override
-    public Object value() {
+    public Object content() {
         return this.content;
     }
 

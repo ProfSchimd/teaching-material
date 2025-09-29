@@ -1,7 +1,7 @@
 public interface IListPosition {
-    Object value();
+    Object content();
     IListPosition next();
-    public void setNext(IListPosition newNext);
+    void setNext(IListPosition newNext);
     IListPosition prev();
-    public void setPrev(IListPosition newPrev);
+    void setPrev(IListPosition newPrev);
 }
