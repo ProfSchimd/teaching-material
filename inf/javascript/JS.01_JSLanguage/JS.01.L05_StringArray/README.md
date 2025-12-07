@@ -1,6 +1,6 @@
 # Stringhe e Array in JavaScript (`JS.01.L05`)
 
-Bentornato! 👋 Sono sempre **John Smith**, ed è il momento di affrontare due dei tipi di dato più usati in assoluto in JavaScript: **le stringhe** e **gli array**.
+Bentornato! 👋 Sono sempre **John Smith**, è il momento di affrontare due dei tipi di dato più usati in assoluto in JavaScript: **le stringhe** e **gli array**.
 
 Questi due mondi ti accompagneranno ovunque nel tuo percorso di programmatore. Quindi... iniziamo subito! 🚀
 
