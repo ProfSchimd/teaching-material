@@ -1,0 +1,7 @@
+#toggleSim {
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+    border-radius: 5%;
+    border: 1pt solid #aaa;
+}
